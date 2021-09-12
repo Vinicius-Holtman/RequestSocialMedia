@@ -1,8 +1,8 @@
 import express from 'express';
-import ListSocialMedia from './ListSocialMedia.js'
-import Twitter from './Twitter.js'
-import Facebook from './Facebook.js'
-import Instagram from './Instagram.js'
+import ListSocialMedia from './controller/ListSocialMediaController.js'
+import Twitter from './controller/TwitterController.js'
+import Facebook from './controller/FacebookController.js'
+import Instagram from './controller/InstagramController.js'
 
 export const routes = express.Router();
 
