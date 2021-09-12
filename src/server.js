@@ -1,5 +1,4 @@
 import express from 'express';
-import fetch from 'node-fetch';
 
 import Twitter from './Twitter.js'
 

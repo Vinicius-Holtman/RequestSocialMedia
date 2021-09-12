@@ -1,11 +1,13 @@
+import fetch from 'node-fetch';
+
 export default {
-    async index(){
-        var url = 'https://api.darksky.net/forecast/<API KEY>/37.8267,-122.4233';
+    async index(req, res){
+        var url = 'http://codefight.davidbanham.com/twitter';
      
         fetch(url)
         .then(res => res.json())
-        .then(data => {
-            res.send({ data });
+        .then(twitter => {
+            res.send({ twitter });
         })
         .catch(err => {
             res.send("I am trapped in a social media factory send help");
