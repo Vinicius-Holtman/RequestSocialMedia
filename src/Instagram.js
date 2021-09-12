@@ -3,10 +3,10 @@ import fetch from 'node-fetch';
 export default {
     async index(req, res){
         try {
-            const url = 'http://codefight.davidbanham.com/twitter';
+            const url = 'http://codefight.davidbanham.com/instagram';
             const result = await fetch(url);
-            const twitter = await result.json();
-            return res.json({ twitter })
+            const instagram = await result.json();
+            return res.json({ instagram })
         }
          catch (e) {
             res.send("I am trapped in a social media factory send help" + e)
