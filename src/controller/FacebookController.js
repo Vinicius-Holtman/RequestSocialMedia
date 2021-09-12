@@ -6,10 +6,10 @@ export default {
             const url = 'http://codefight.davidbanham.com/facebook';
             const result = await fetch(url);
             const facebook = await result.json();
-            return res.json({ facebook })
+            return res.send({ facebook })
         }
          catch (e) {
-            res.send("I am trapped in a social media factory send help" + e)
+            res.send("I am trapped in a social media factory send help")
         }
     }
 }

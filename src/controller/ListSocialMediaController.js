@@ -7,7 +7,9 @@ export default {
         const twitter = await Twitter.index
         const facebook = await Facebook.index
         const instagram = await Instagram.index
+
+        console.log(twitter)
     
-        return res.json({ twitter, facebook, instagram })
+        return res.send({ twitter, facebook, instagram })
     }
 }
