@@ -1,15 +1,20 @@
-import Twitter from './TwitterController.js'
-import Facebook from './FacebookController.js'
-import Instagram from './InstagramController.js'
+import fetch from 'node-fetch';
 
 export default {
     async index(req, res){
-        const twitter = await Twitter.index
-        const facebook = await Facebook.index
-        const instagram = await Instagram.index
+            const urlTwitter = 'http://codefight.davidbanham.com/twitter';
+            const resultTwitter = await fetch(urlTwitter);
+            let twitter = await resultTwitter.json()
+            
+            const urlFacebook = 'http://codefight.davidbanham.com/facebook';
+            const resultFacebook = await fetch(urlFacebook);
+            let facebook = await resultFacebook.json()
 
-        console.log(twitter)
-    
-        return res.send({ twitter, facebook, instagram })
+            const urlInstagram = 'http://codefight.davidbanham.com/instagram';
+            const resultInstagram = await fetch(urlInstagram);
+            let instagram = await resultInstagram.json()
+
+            return res.send({twitter, facebook, instagram})
+
     }
 }
